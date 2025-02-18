@@ -24,12 +24,12 @@ const generateAccessAndRefreshTokens = async (userId) => {
 
 const registerUser = asyncHandler(async (req, res) => {
   //frontend se user ka data aega, like postman
-  const { fullname, email, username, password, phone } = req.body;
+  const { fullname, email, username, password, phonenumber } = req.body;
 
   //now we will validate whether all fields are filled or empty
   if (
-    [fullname, email, username, password,phone].some(
-      (field_iterator) => field_iterator.trim() === ''
+    [fullname, email, username, password,phonenumber].some(
+      (field_iterator) => field_iterator?.trim() === ''
     )
   ) {
     throw new ApiError(400, 'all fields are required');
@@ -71,7 +71,7 @@ const registerUser = asyncHandler(async (req, res) => {
     email,
     password,
     username: username.toLowerCase(),
-    phone
+    phonenumber
   });
 
   //if user is successfully  created then we get is corresponding to that user
