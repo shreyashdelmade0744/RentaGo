@@ -1,0 +1,51 @@
+bcrpty for password
+aggreggation pipeline to perform crud operations and much more in mongo db 
+jwt is bearer token , that is who so ever has this token , is right person
+
+for file uploading
+we will use multer to take file from user , store it in local server for some time , and then with the help
+of cloudanary we will upload it to the cloud/or aws 
+
+
+GET : retrieve a resoure
+HEAD : No message body (response headers only)
+OPTIONS: what operations are available
+TRACE : loopback test (get same data)
+DELETE : remove a resource
+PUT : replace a desource
+POST : interact with resource (mostly add)
+PATCH : change part of a resource 
+
+Http status code
+
+1xx - Informational 
+2xx - Success
+3xx - Redirection
+4xx - Client Error
+5xx - Server Error
+
+for user controller
+
+for registering the user:-
+
+// get user details from frontend
+// validation - not empty
+// check if user already exists: username, email
+// check for images, check for avatar
+// upload them to cloudinary, avatar
+// create user object - create entry in db
+// remove password and refresh token field from response
+// check for user creation
+// return res
+
+to login a User :-
+
+get data from req.body;
+take username or email 
+find the user
+check for password
+access and refresh token 
+send cookie
+
+
+
