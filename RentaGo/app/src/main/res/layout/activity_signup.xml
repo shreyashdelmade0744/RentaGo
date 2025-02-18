@@ -27,7 +27,6 @@
         android:id="@+id/fullname"
         android:layout_width="350dp"
         android:layout_height="48dp"
-        android:background=""
         android:ems="10"
         android:gravity="center"
         android:hint="Enter the full name"
@@ -44,7 +43,7 @@
         android:id="@+id/username"
         android:layout_width="350dp"
         android:layout_height="48dp"
-        android:background=""
+        
         android:ems="10"
         android:gravity="center"
         android:hint="Enter the username"
@@ -60,7 +59,7 @@
         android:id="@+id/email"
         android:layout_width="350dp"
         android:layout_height="48dp"
-        android:background=""
+        
         android:ems="10"
         android:gravity="center"
         android:hint="Enter the email"
@@ -79,7 +78,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="24dp"
-        android:background=""
+        
         android:gravity="center"
         android:hint="Enter the password"
         android:inputType="textPassword"
@@ -97,7 +96,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="24dp"
-        android:background=""
+        
         android:gravity="center"
         android:hint="Enter the phone number"
         android:inputType="textPassword"

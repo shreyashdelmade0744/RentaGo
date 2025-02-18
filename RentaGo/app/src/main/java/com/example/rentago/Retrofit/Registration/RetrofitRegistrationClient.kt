@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitRegistrationClient {
-    private const val BASE_URL = "http://localhost:8000/api/v1/users/"
+    private const val BASE_URL = "https://rentago-lq51.onrender.com/api/v1/users/"
 
     val instance: ApiService by lazy {
         Retrofit.Builder()

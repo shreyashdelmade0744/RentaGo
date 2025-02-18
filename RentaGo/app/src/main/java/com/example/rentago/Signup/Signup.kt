@@ -73,7 +73,7 @@ class Signup : AppCompatActivity() {
 
         val file = File(filePath)
         val requestFile = RequestBody.create(MediaType.parse("image/*"), file)
-        val imagePart = MultipartBody.Part.createFormData("image", file.name, requestFile)
+        val imagePart = MultipartBody.Part.createFormData("avatar", file.name, requestFile)
 
         // Convert text inputs to request bodies
         val fullnameBody = RequestBody.create(MediaType.parse("text/plain"), binding.fullname.text.toString())
