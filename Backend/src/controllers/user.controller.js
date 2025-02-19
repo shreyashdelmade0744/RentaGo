@@ -12,6 +12,7 @@ const generateAccessAndRefreshTokens = async (userId) => {
     const accessToken = await user.generateAccessToken();
     const refreshToken = await user.generateRefreshToken();
     user.refreshToken = refreshToken;
+    user.accessToken = accessToken;
     await user.save({ validateBeforeSave: false });
     return { accessToken, refreshToken };
   } catch (error) {
@@ -128,8 +129,8 @@ const loginUser = asyncHandler(async (req, res) => {
 
   return res
     .status(200)
-    // .cookie('accessToken', accessToken, options)
-    // .cookie('refreshToken', refreshToken, options)
+    .cookie('accessToken', accessToken, options)
+    .cookie('refreshToken', refreshToken, options)
     .json({
       user: loggedinUser,
       accessToken,

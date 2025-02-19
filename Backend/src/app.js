@@ -20,9 +20,13 @@ app.use(cookieParser())//to perform crud operation on cookie of browser
 
 //routes import
 import userRouter from "./routes/user.routes.js"
+// imprting the item routes as well
+import itemRouter from "./routes/item.routes.js"
 
 //routes declaration 
 app.use("/api/v1/users",userRouter)
+
+app.use("/api/items", itemRouter);
 
 
 export default app

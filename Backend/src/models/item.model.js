@@ -12,13 +12,13 @@ const itemSchema = new Schema({
     },
     category: {
         type: String,
-        enum: ["Electronics", "Furniture", "Vehicles", "Tools", "Clothing", "Others"],
-        required: true
+        // enum: ["Electronics", "Furniture", "Vehicles", "Tools", "Clothing", "Others"],
+        // required: true
     },
     owner: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
-        required: true
+        // required: true
     },
     price:{
         type:Number,
