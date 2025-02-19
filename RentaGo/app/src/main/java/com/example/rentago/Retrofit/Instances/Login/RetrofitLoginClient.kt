@@ -1,11 +1,11 @@
-package com.example.rentago.Retrofit.Registration.Registration
+package com.example.rentago.Retrofit.Instances.Login
 
-import com.example.rentago.Retrofit.Registration.ApiService
+import com.example.rentago.Retrofit.Instances.ApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RetrofitRegistrationClient {
-    private const val BASE_URL = "https://rentago-lq51.onrender.com/api/v1/users/"
+object RetrofitLoginClient {
+    private const val BASE_URL = "https://rentago-lq51.onrender.com/api/v1/users/" // Change to your backend URL
 
     val instance: ApiService by lazy {
         Retrofit.Builder()

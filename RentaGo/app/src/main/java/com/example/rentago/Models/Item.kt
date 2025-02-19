@@ -7,5 +7,5 @@ data class Item(
     val owner: User,             // Owner's User ID
     val price: Number,
     val available: Boolean = true, // Default is true
-    val images: List<String> = emptyList() // List of image URLs
+    val images: String // List of image URLs
 )

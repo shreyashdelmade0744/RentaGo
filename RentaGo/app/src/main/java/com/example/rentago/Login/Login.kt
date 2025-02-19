@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.rentago.MainActivity
 import com.example.rentago.Requests.LoginRequest
 import com.example.rentago.Response.LoginResponse
-import com.example.rentago.Retrofit.Registration.Login.RetrofitLoginClient
+import com.example.rentago.Retrofit.Instances.Login.RetrofitLoginClient
 import com.example.rentago.databinding.ActivityLoginBinding
 import retrofit2.Call
 import retrofit2.Callback

@@ -156,9 +156,9 @@ class MainActivity : AppCompatActivity() {
             .show()
     }
 
-    private fun saveItem(name: String, price: String, description: String, owner: String, imageUri: Uri) {
-        Toast.makeText(this, "Item Saved:\n$name\n$price\n$description\nOwner: $owner\nImage: $imageUri", Toast.LENGTH_LONG).show()
-        val filePath = getRealPathFromURI(imageUri)
+    private fun saveItem(name: String, price: String, description: String, owner: String, images: Uri) {
+        Toast.makeText(this, "Item Saved:\n$name\n$price\n$description\nOwner: $owner\nImage: $images", Toast.LENGTH_LONG).show()
+        val filePath = getRealPathFromURI(images)
         if (filePath == null) {
             Toast.makeText(this, "Error selecting image", Toast.LENGTH_SHORT).show()
             return
@@ -166,7 +166,7 @@ class MainActivity : AppCompatActivity() {
 
         val file = File(filePath)
         val requestFile = RequestBody.create(MediaType.parse("image/*"), file)
-        val imagePart = MultipartBody.Part.createFormData("image", file.name, requestFile)
+        val imagePart = MultipartBody.Part.createFormData("images", file.name, requestFile)
 
         // Convert text inputs to request bodies
         val itemName = RequestBody.create(MediaType.parse("text/plain"), name)

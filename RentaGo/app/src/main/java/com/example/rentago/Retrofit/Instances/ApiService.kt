@@ -1,4 +1,4 @@
-package com.example.rentago.Retrofit.Registration
+package com.example.rentago.Retrofit.Instances
 
 import com.example.rentago.Requests.LoginRequest
 import com.example.rentago.Response.ItemResponse
@@ -30,17 +30,15 @@ interface ApiService {
     fun loginUser(@Body request: LoginRequest): Call<LoginResponse>
 
     @POST("refresh-token")
-    fun refreshToken(@Header("authorization") refreshToken: String): Call<LoginResponse>
-
+    fun refreshToken(@Header("Authorization") refreshToken: String): Call<LoginResponse>
     @Multipart
     @POST("addItem") // Adjust as per your API route
     fun uploadItem(
         @Header("authorization") token: String, // Ensure token is passed
-        @Part images: MultipartBody.Part,
+        @Part image: MultipartBody.Part,
         @Part("name") name: RequestBody,
         @Part("description") description: RequestBody,
         @Part("price") price: RequestBody,
+//        @Part("owner") owner: RequestBody
     ): Call<ItemResponse> // Replace with your response model
-
-
 }

@@ -1,8 +1,9 @@
 package com.example.rentago.Response
 
+import com.example.rentago.Models.Item
+
 data class ItemResponse(
-    val name: String,
-    val description: String,
-    val price: Number,
-    val images: String  // List of image URLs
+    val success: Boolean,
+    val item:Item,
+    val message:String
 )

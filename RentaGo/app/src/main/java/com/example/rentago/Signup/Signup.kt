@@ -10,7 +10,7 @@ import android.util.Log
 import android.widget.Toast
 import com.example.rentago.R
 import com.example.rentago.Response.RegistrationResponse
-import com.example.rentago.Retrofit.Registration.Registration.RetrofitRegistrationClient
+import com.example.rentago.Retrofit.Instances.Registration.RetrofitRegistrationClient
 import com.example.rentago.databinding.ActivitySignupBinding
 import okhttp3.MediaType
 import okhttp3.MultipartBody

@@ -1,7 +1,7 @@
 package com.example.rentago.Login
 
 import android.content.Context
-import com.example.rentago.Retrofit.Registration.Login.RetrofitLoginClient
+import com.example.rentago.Retrofit.Instances.Login.RetrofitLoginClient
 import okhttp3.Interceptor
 import okhttp3.Response
 
