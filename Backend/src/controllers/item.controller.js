@@ -22,10 +22,10 @@ export const createItem = asyncHandler(async (req, res) => {
             throw new ApiError(400, "At least one image is required");
         }
 
-        let imageUrls = [];
+
         const path = req.files?.images[0]?.path;
         const result = await uploadOnCloudinary(path);
-        imageUrls.push(result.secure_url)
+        const imageUrls=result.secure_url
 
         // Ensure images are uploaded successfully
         if (imageUrls.length === 0) {

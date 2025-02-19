@@ -12,6 +12,7 @@ const itemSchema = new Schema({
     },
     category: {
         type: String,
+        default:"Ele"
         // enum: ["Electronics", "Furniture", "Vehicles", "Tools", "Clothing", "Others"],
         // required: true
     },
@@ -29,8 +30,8 @@ const itemSchema = new Schema({
         default: true
     },
     images: {
-        type: [String], // Array of image URLs
-        default: []
+        type: String, // Array of image URLs
+        required:true
     }
 
 },{timestamps:true})
