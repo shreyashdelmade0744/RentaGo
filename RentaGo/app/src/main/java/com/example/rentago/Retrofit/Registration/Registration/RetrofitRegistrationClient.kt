@@ -1,5 +1,6 @@
-package com.example.rentago.Retrofit.Registration
+package com.example.rentago.Retrofit.Registration.Registration
 
+import com.example.rentago.Retrofit.Registration.ApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

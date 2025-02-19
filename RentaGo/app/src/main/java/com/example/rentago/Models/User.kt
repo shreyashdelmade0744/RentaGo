@@ -1,9 +1,14 @@
 package com.example.rentago.Models
 
 data class User(
-    val fullname: String,
-    val email: String,
     val username: String,
+    val email: String,
+    val fullname: String,
+    val avatar: String,
+    val listeditems: List<String>?, // List of Item IDs
+    val renteditem: List<String>?, // List of Order IDs
     val phonenumber: String,
-    val password: String
+    val accessToken: String?, // Token if included in API response
+    val refreshToken: String? // Token if included in API response
 )
+
