@@ -181,8 +181,6 @@ class MainActivity : AppCompatActivity() {
         } else {
             Log.e("TOKEN_CHECK", "No token found, user needs to log in")
         }
-
-
         RetrofitItemClient.instance.uploadItem("Bearer $token"
             ,imagePart, itemName, itemDescription, itemPrice)
             .enqueue(object : Callback<ItemResponse> {
