@@ -25,7 +25,9 @@ export const createItem = asyncHandler(async (req, res) => {
 
         const path = req.files?.images[0]?.path;
         const result = await uploadOnCloudinary(path);
-        const imageUrls=result.secure_url
+        const imageUrls=result.url
+
+        console.log(imageUrls)
 
         // Ensure images are uploaded successfully
         if (imageUrls.length === 0) {
@@ -36,10 +38,8 @@ export const createItem = asyncHandler(async (req, res) => {
         const newItem = new Item({
             name,
             description,
-            category,
-            owner,
             price,
-            images: imageUrls, // Store only secure URLs
+            images: imageUrls, 
         });
 
         await newItem.save();

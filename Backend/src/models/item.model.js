@@ -8,11 +8,11 @@ const itemSchema = new Schema({
     },
     description:{
         type:String,
-        required:true
+            required:true
     },
     category: {
         type: String,
-        default:"Ele"
+        default:""
         // enum: ["Electronics", "Furniture", "Vehicles", "Tools", "Clothing", "Others"],
         // required: true
     },
