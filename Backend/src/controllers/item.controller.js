@@ -8,15 +8,15 @@ export const createItem = asyncHandler(async (req, res) => {
         const owner = req.user?._id;
         console.log(owner)
 
-        if (!name || !description || !category || !price) {
+        if (!name || !description || !price) {
             throw new ApiError(400, "All fields are required");
         }
 
         // Validate category
-        const allowedCategories = ["Electronics", "Furniture", "Vehicles", "Tools", "Clothing", "Others"];
-        if (!allowedCategories.includes(category)) {
-            throw new ApiError(400, "Invalid category value");
-        }
+        // const allowedCategories = ["Electronics", "Furniture", "Vehicles", "Tools", "Clothing", "Others"];
+        // if (!allowedCategories.includes(category)) {
+        //     throw new ApiError(400, "Invalid category value");
+        // }
 
         if (!req.files || req.files.length === 0) {
             throw new ApiError(400, "At least one image is required");
